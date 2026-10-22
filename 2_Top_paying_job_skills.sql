@@ -1,4 +1,4 @@
-/* Q2:- what skills are required for the top-paying Data Analyst job?
+/* Q:- what skills are required for the top-paying Data Analyst job?
 use  the top 10 highest-paying Data Analyst jobs form first query
 Add the specific skills required for these roles
 why? it provides a detailed look at which high-paying jobs demand certain skill,
@@ -23,8 +23,8 @@ with top_paying AS (
 select
     top_paying . *,
     skills
-from 
-    top_paying 
+from
+    top_paying
 JOIN skills_job_dim as sjd ON sjd.job_id = top_paying.job_id
 JOIN skills_dim as sd ON sd.skills_id = sjd.skill_id
 ORDER BY salary_year_avg DESC
